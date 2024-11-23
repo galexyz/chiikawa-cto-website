@@ -30,10 +30,10 @@ export default function Home() {
         <div className="flex flex-row justify-center">
           <Image src={chiikawaImg} width={500} height={100} alt="chiikawa" />
         </div>
-        <h1 className="text-center text-white text-7xl font-extrabold  text-stroke">
-          Chiikawa
+        <h1 className="text-center text-white text-5xl  sm:text-7xl font-extrabold text-outline">
+          CHIIKAWA
         </h1>
-        <h2 className="text-center text-white text-4xl sm:text-5xl font-extrabold text-stroke pt-5">
+        <h2 className="text-center text-white text-4xl sm:text-5xl font-extrabold text-outline pt-5">
           Uniting fans on-chain
         </h2>
         <div className="flex flex-row justify-center p-10 space-x-5">
@@ -54,7 +54,7 @@ export default function Home() {
             onClick={() => window.open("https://t.me/CTOCHIIKAWA")}
           />
         </div>
-        <div className="text-center text-white text-4xl font-extrabold text-stroke pt-5">
+        <div className="text-center text-white text-4xl font-extrabold text-outline pt-5">
           Contract Address
         </div>
         <div className="flex flex-col items-center gap-4 p-4">
@@ -75,17 +75,17 @@ export default function Home() {
               )
             }
           >
-            <div className="text-center text-white text-xl sm:text-4xl font-extrabold text-stroke">
+            <div className="text-center text-white text-xl sm:text-4xl font-extrabold ">
               BUY $CHIIKAWA
             </div>
           </div>
         </div>
-        <div className="text-center text-white text-5xl font-extrabold text-stroke py-5">
+        <div className="text-center text-white text-5xl font-extrabold text-outline py-5">
           Chart
         </div>
         <div className="flex flex-row justify-center w-full">
           <iframe
-            className="sm:w-8/12 w-11/12 sm:h-[600px] h-80"
+            className="sm:w-8/12 w-full sm:px-0 sm:h-[600px] h-96"
             src="https://dexscreener.com/solana/DHoadXCbf6TcadkcMGJ8kFRdDa2sXPQ1KrgodUDRpump?embed=1&amp;theme=dark"
           />
         </div>
