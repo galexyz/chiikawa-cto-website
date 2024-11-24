@@ -33,13 +33,17 @@ export default function Home() {
       </Head>
       {/* <!-- Google tag (gtag.js) --> */}
       <Script
-        async
+        id="google-analytics"
+        strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-DVC4WWGM9S"
       ></Script>
-      <Script>
-        {` window.dataLayer = window.dataLayer || []; function gtag()
-        {dataLayer.push(arguments)}
-        gtag('js', new Date()); gtag('config', 'G-DVC4WWGM9S');`}
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-DVC4WWGM9S');
+        `}
       </Script>
       <main className="w-full h-full bg-yellow-200 sm:p-10 p-5">
         <div className="flex flex-row justify-center">
