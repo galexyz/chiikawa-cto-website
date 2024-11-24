@@ -7,13 +7,19 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { useState } from "react";
 import { FaRegCopy } from "react-icons/fa6";
+import { IoCheckmarkSharp } from "react-icons/io5";
+import Script from "next/script";
 
 export default function Home() {
   const textToCopy = "DHoadXCbf6TcadkcMGJ8kFRdDa2sXPQ1KrgodUDRpump";
-
+  const [copied, setCopied] = useState(false);
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(textToCopy);
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
     } catch (err) {
       console.log(err);
     }
@@ -25,17 +31,47 @@ export default function Home() {
         <title>Chiikawa</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="w-full h-full bg-yellow-200 lg:p-20 sm:p-10 p-5">
+      {/* <!-- Google tag (gtag.js) --> */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-DVC4WWGM9S"
+      ></Script>
+      <Script>
+        {` window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments)}
+        gtag('js', new Date()); gtag('config', 'G-DVC4WWGM9S');`}
+      </Script>
+      <main className="w-full h-full bg-yellow-200 sm:p-10 p-5">
         <div className="flex flex-row justify-center">
           <Image src={chiikawaImg} width={500} height={100} alt="chiikawa" />
         </div>
         <h1 className="text-center text-white text-5xl  sm:text-7xl font-extrabold text-outline">
-          CHIIKAWA
+          CHIIKAWA FAN TOKEN
         </h1>
         <h2 className="text-center text-white text-4xl sm:text-5xl font-extrabold text-outline pt-5">
-          Uniting fans on-chain
+          Onboarding Chiikawa fans on-chain
         </h2>
+
+        <div className="text-center text-white text-4xl font-extrabold text-outline pt-20">
+          Contract Address
+        </div>
+        <div className="flex flex-col items-center gap-4 p-4">
+          <div className="border-2 sm:text-base text-2xs bg-white border-black flex flex-row justify-between items-center p-2 sm:px-4 rounded-lg gap-x-2 sm:gap-x-5">
+            {!copied ? (
+              <FaRegCopy
+                className="w-6 h-6 cursor-pointer"
+                onClick={handleCopy}
+              />
+            ) : (
+              <IoCheckmarkSharp className="w-6 h-6" />
+            )}
+
+            <div>{textToCopy}</div>
+          </div>
+        </div>
+        <div className="text-center text-white text-4xl font-extrabold text-outline pt-5">
+          Be apart of our growing community!
+        </div>
         <div className="flex flex-row justify-center p-10 space-x-5">
           <FaXTwitter
             className="w-8 h-8 lg:w-12 lg:h-12 cursor-pointer"
@@ -53,18 +89,6 @@ export default function Home() {
             className="w-8 h-8 lg:w-12 lg:h-12 cursor-pointer"
             onClick={() => window.open("https://t.me/CTOCHIIKAWA")}
           />
-        </div>
-        <div className="text-center text-white text-4xl font-extrabold text-outline pt-5">
-          Contract Address
-        </div>
-        <div className="flex flex-col items-center gap-4 p-4">
-          <div className="border-2 sm:text-base text-2xs bg-white border-black flex flex-row justify-between items-center p-2 sm:px-4 rounded-lg gap-x-2 sm:gap-x-5">
-            <FaRegCopy
-              className="w-6 h-6 cursor-pointer"
-              onClick={handleCopy}
-            />
-            <div>{textToCopy}</div>
-          </div>
         </div>
         <div className="flex flex-row justify-center">
           <div
