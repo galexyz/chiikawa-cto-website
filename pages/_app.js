@@ -9,6 +9,7 @@ import { useState } from "react";
 import { FaRegCopy } from "react-icons/fa6";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   const textToCopy = "DHoadXCbf6TcadkcMGJ8kFRdDa2sXPQ1KrgodUDRpump";
@@ -45,6 +46,8 @@ export default function Home() {
           gtag('config', 'G-DVC4WWGM9S');
         `}
       </Script>
+      <Analytics />
+
       <main className="w-full h-full bg-yellow-200 sm:p-10 p-5">
         <div className="flex flex-row justify-center">
           <Image src={chiikawaImg} width={500} height={100} alt="chiikawa" />
