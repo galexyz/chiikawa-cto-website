@@ -133,11 +133,11 @@ export default function Home() {
           <h2 className="text-center text-white text-3xl sm:text-5xl font-extrabold text-outline  py-10">
             Tokenomics
           </h2>
-          <div className="flex flex-row justify-center items-center">
+          <div className="flex flex-row justify-center items-center space-x-5 sm:space-x-10">
             <Image src={chiyiImg} alt="chiikawa" className="sm:w-60 w-56" />
             <div className="space-y-5">
               <div className="text-white text-2xl sm:text-3xl font-extrabold text-outline">
-                1,000,000 Tokens
+                1 Billion Tokens
               </div>
               <div className="text-black text-lg sm:text-xl font-bold">
                 100% of tokens are in circulation <br />
@@ -145,7 +145,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row justify-center items-center">
+          <div className="flex flex-row justify-center items-center space-x-5 sm:space-x-10">
             <div className="space-y-5">
               <div className="text-white text-2xl sm:text-3xl font-extrabold text-outline">
                 No Taxes
@@ -156,7 +156,7 @@ export default function Home() {
             </div>
             <Image src={usagiImg} alt="chiikawa" className="sm:w-48 w-28" />
           </div>
-          <div className="flex flex-row justify-center items-center gap-x-10">
+          <div className="flex flex-row justify-center items-center space-x-10 sm:space-x-16">
             <Image src={hachiwareImg} alt="chiikawa" className="sm:w-48 w-24" />
             <div className="space-y-5">
               <div className="text-white text-2xl sm:text-3xl font-extrabold text-outline">
@@ -167,7 +167,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row justify-center items-center">
+          <div className="flex flex-row justify-center items-center ">
             <div className="space-y-5">
               <div className="text-white text-2xl sm:text-3xl font-extrabold text-outline">
                 Coming Soon
