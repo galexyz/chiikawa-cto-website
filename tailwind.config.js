@@ -49,6 +49,9 @@ module.exports = {
         "ultra-call-green-lighter": "#2ccdd1",
         "ultra-call-black": "#000000B2",
       },
+      backgroundImage: {
+        "hero-pattern": "url('/chiikawabg.jpg')",
+      },
     },
   },
   plugins: [
